@@ -10,7 +10,7 @@ public final class RealTimeRegression {
     
     public static let shared = RealTimeRegression()
     
-    var recommendations = 3 // By default 3 recommendations
+    private var recommendations = 3 // By default 3 recommendations
     
     private let queue = DispatchQueue(label: "com.realtime.regression.queue", qos: .userInitiated)
     
@@ -55,6 +55,10 @@ public final class RealTimeRegression {
                 }
             }
         }
+    }
+    
+    public func set(recommendations: Int) {
+        self.recommendations = recommendations
     }
     
     private func dataFrame<Element: Codable>(for data: [FavoriteWrapper<Element>]) -> DataFrame {
