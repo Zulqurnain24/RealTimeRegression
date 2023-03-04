@@ -38,7 +38,7 @@ public struct FavoriteWrapper<T> {
 
 public final class RealTimeRegression {
 
-    static let shared = RealTimeRegression()
+    public static let shared = RealTimeRegression()
     
     private let queue = DispatchQueue(label: "com.realtime.regression.queue", qos: .userInitiated)
     
