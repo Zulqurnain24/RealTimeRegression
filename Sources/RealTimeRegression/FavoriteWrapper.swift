@@ -33,7 +33,7 @@ public struct FavoriteWrapper<T> {
             imageHistogram = image?.imageHistogram() ?? []
         }
     }
-    var isFavorite: Bool?
+    public var isFavorite: Bool?
     public init(model: T, title: String, imageHistogram: [Double]) {
         self.model = model
         self.title = title
