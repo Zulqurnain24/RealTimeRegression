@@ -4,6 +4,10 @@ RealTimeRegression is a framework that helps you perform realtime regression bas
 
 Usage:
 
+// Import framework like this
+
+import RealTimeRegression
+
 You can use FavoriteWrapper<T> class with any object and populate the wrappers in it.
 For Example:
 
@@ -31,7 +35,7 @@ mars.model.date = Date()
 //Meta data for ML
     
 mars.title = mars.model.title
-mars.imageHistogram = UIImage(named: "mars.png")imageHistogram()
+mars.imageHistogram = UIImage(named: "mars.png").imageHistogram()
 
 //when the user opens the detail view for this object do
     
