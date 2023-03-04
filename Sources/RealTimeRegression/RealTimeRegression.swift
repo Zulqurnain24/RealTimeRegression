@@ -102,16 +102,7 @@ public final class RealTimeRegression {
         dataFrame.append(
             column: Column(name: "imageHistogram", contents: data.map(\.imageHistogram))
         )
-        
-        dataFrame.append(
-            column: Column<Double>(
-                name: "timeSpent",
-                contents: data.map {
-                    return $0.timeSpent
-                }
-            )
-        )
-        
+ 
         return dataFrame
     }
 }
