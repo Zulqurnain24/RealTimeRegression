@@ -22,8 +22,5 @@ let package = Package(
         .target(
             name: "RealTimeRegression",
             dependencies: []),
-        .testTarget(
-            name: "RealTimeRegressionTests",
-            dependencies: ["RealTimeRegression"]),
     ]
 )
