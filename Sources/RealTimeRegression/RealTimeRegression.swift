@@ -37,9 +37,10 @@ public struct FavoriteWrapper<T> {
 }
 
 public final class RealTimeRegression {
+
     private let queue = DispatchQueue(label: "com.realtime.regression.queue", qos: .userInitiated)
     
-    func computeRecommendations<Element: Codable>(basedOn items: [FavoriteWrapper<Element>]) async throws -> [Element] {
+    public func computeRecommendations<Element: Codable>(basedOn items: [FavoriteWrapper<Element>]) async throws -> [Element] {
         return try await withCheckedThrowingContinuation { continuation in
             queue.async {
                 if #available(iOS 15.0, *) {
