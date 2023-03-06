@@ -69,14 +69,16 @@ mars.hasClosed = true
 mars.timeSpent
 ```
 
-#### Finally you will receive the inference in the form of ####
+#### Finally you will receive the inference in the form of result which you can assign to the recommendations ####
 
 ```   
+ var recommendations: [PlanetModel] = []
  var allPlanets: [FavoriteWrapper<PlanetModel>] = []
  .
  .
  .
  let result = try await RealTimeRegression.shared.computeRecommendations(basedOn: allPlanets)
+ recommendations = result
 ```
 
 #### You can adjust the recommendations by setting recommendations parameter like this ####
